@@ -4,6 +4,10 @@ This is a simple website build that uses gulp to maximise the workflow, while he
 
 I have tried to add as many things to this build without adding unnecessary bloat.
 
+   ~ Favicons.
+   
+   ~ Google / twitter / facebook metatags in the `<head>` section of the HTML file.
+
 Note this is a build for simple **one pager websites**, **landing pages** or **splash pages**.
 
 This is not really design for a website that will use multiple HTML files.
@@ -32,6 +36,10 @@ $ npm install
 This will download all the files you need to make gulp work (node-mdoules). Note it will also download the newest versions of the frameworks/addons used. See Frameworks section below.
 ### Your work environment is ready.
 Read the next section about gulp to understand how to run browsersync.
+### Updating your favicons
+Visit this site  - https://www.favicon-generator.org/ 
+
+Generate your favicons. You **do not** need to add the links in the html file. That has been taken care of. Download your favicons and put the content of your favicon.ico folder into the favicon.ico folder found in `src > assets`.
 
 
 # How the gulp file works
@@ -64,4 +72,4 @@ This build uses
    
    ~ Simple Grid
 
-If you only want to use some of these addons or none - simple go to `src > assets > js or sass`. Files are clearly name so delete which ever you don't need and if you don't want any, delete the assets folder completely. Make sure you check both js and sass folders.
+If you only want to use some of these addons or none - simple go to `src > assets > js or sass`. Files are clearly named so delete which ever you don't need and if you don't want any, delete both the js and sass folder all together. Make sure you check both js and sass folders.
