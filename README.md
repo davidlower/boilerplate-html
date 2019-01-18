@@ -54,14 +54,14 @@ In short I have removed the minify tasks from the generic 'gulp' command because
 
 You must remove the hashtags from the top files that are listed (clearly marked in the file), so that they **ARE** ignored. You do not want to have gulp files or package json files when we push your website to the project branch or live.
 
-# Framework and asset addons
+# Framework and Assets
 
 This build uses
    
-   ~JQuery
+   ~ JQuery
    
-   ~SlicK Carousel
+   ~ SlicK Carousel
    
-   ~Simple Grid
+   ~ Simple Grid
 
 If you only want to use some of these addons or none - simple go to `src > assets > js or sass`. Files are clearly name so delete which ever you don't need and if you don't want any, delete the assets folder completely. Make sure you check both js and sass folders.
