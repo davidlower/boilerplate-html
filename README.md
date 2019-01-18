@@ -13,8 +13,10 @@ If you have more than one HTML file I would recommend using something else.
 1) You need node.js. Make sure you have that.
 2) Pull this repo or download the zip file.
 3) In terminal check if you have gulp.
-   ```$ gulp -v
-   $ CLI version 3.9.1```
+   ```
+   $ gulp -v
+   $ CLI version 3.9.1
+   ```
 If you don't see a version
 4) In terminal ```$ npm install``` - this will download all the files you need to make gulp. Note it will also download the newest versions of the addons we used. See Frameworks section below.
 5)
