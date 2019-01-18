@@ -57,8 +57,8 @@ You must remove the hashtags from the top files that are listed (clearly marked 
 # Framework and asset addons
 
 This build uses
-   JQuery
-   SlicK Carousel
-   Simple Grid
+   ~JQuery
+   ~SlicK Carousel
+   ~Simple Grid
 
-If you only want to use some of these addons or none - simple go to `src > assets > js or sass. Files are clearly name so delete which ever you don't need and if you don't want any delete the assets folder completely.
+If you only want to use some of these addons or none - simple go to `src > assets > js or sass`. Files are clearly name so delete which ever you don't need and if you don't want any delete the assets folder completely.
