@@ -1,12 +1,12 @@
 # Welcome to this custom starter build.
 
-This is a simple website build that uses gulp to maximise our workflow while helping produce a solid website at the end. The aim is to reduce the time needed to setup the dev environment to begin any project.
+This is a simple website build that uses gulp to maximise the workflow, while helping produce a solid website at the end. The aim is to reduce the time needed to setup the dev environment to begin any project.
 
 I have tried to add as many things to this build without adding unnecessary bloat.
 
-Note this is a build for simple one pager websites, landing pages or splash pages.
+Note this is a build for simple **one pager websites**, **landing pages** or **splash pages**.
 
-If you have more than one HTML file I would recommend using something else.
+This is not really design for a website that will use multiple HTML files.
 
 # To start
 
@@ -17,8 +17,19 @@ If you have more than one HTML file I would recommend using something else.
 $ gulp -v
 $ CLI version 3.9.1
 ```
-If you don't see a version
-4) In terminal ```$ npm install``` - this will download all the files you need to make gulp. Note it will also download the newest versions of the addons we used. See Frameworks section below.
+If you don't see a version popup then you need to install it.
+```
+$ npm install gulp -g
+```
+For mac users you may have to do 
+```
+$ sudo npm install gulp -g
+```
+4) In terminal 
+```
+$ npm install
+``` 
+This will download all the files you need to make gulp work (node-mdoules). Note it will also download the newest versions of the frameworks/addons used. See Frameworks section below.
 5)
 
 
