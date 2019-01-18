@@ -43,8 +43,11 @@ $ gulp minify
 $ gulp all
 ```
 'gulp' is the generic command to start the basic everyday use case - this will kick start browersync.
+
 'gulp minify' is the command to minify all your files in the production folder.
+
 'gulp all' is the command to run **ALL** tasks together.
+
 In short I have removed the minify tasks from the generic 'gulp' command because these tasks are not neccessary to constantly undate with every save. This will speed up your browsersync and gulp performance. However you will need to remember to minify your code when pushing to developement. If you would rather not have the hassle to remember this, you can simply cover it all with 'gulp all'.
 
 # Gitignore files
