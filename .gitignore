@@ -1,4 +1,14 @@
+####################################
+# REMOVE THE HASHTAGS FROM THESE FILES.
+# You want to ignore these files when you push to your own repo.
+
+# gulpfile.js
+# package-lock.json
+# package.json
+# README.md
 node_modules
+
+####################################
 
 # Created by https://www.gitignore.io/api/node,macos,jekyll,windows
 # Edit at https://www.gitignore.io/?templates=node,macos,jekyll,windows
