@@ -68,7 +68,6 @@ In short I have removed the minify tasks from the generic 'gulp' command because
 
 ```
 ctrl + c
-
 ```
 will quit any of the actively running gulp commands.
 
