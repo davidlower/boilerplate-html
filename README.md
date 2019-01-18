@@ -10,9 +10,9 @@ This is not really design for a website that will use multiple HTML files.
 
 # To start
 
-1) You need node.js. 
-2) Pull this repo or download the zip file.
-3) In terminal check if you have gulp.
+### You need node.js. 
+### Pull this repo or download the zip file.
+### In terminal check if you have gulp.
 ```
 $ gulp -v
 $ CLI version 3.9.1
@@ -25,12 +25,13 @@ For mac users you may have to do
 ```
 $ sudo npm install gulp -g
 ```
-4) In terminal 
+### In terminal 
 ```
 $ npm install
 ``` 
 This will download all the files you need to make gulp work (node-mdoules). Note it will also download the newest versions of the frameworks/addons used. See Frameworks section below.
-5)
+### Your work environment is ready.
+Read the next section about gulp to understand how to run browsersync.
 
 
 # How the gulp file works
