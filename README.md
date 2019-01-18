@@ -37,10 +37,13 @@ This will download all the files you need to make gulp work (node-mdoules). Note
 ### Your work environment is ready.
 Read the next section about gulp to understand how to run browsersync.
 ### Updating your favicons
-Visit this site  - https://www.favicon-generator.org/ 
+Visit this site  - https://www.favicon-generator.org/.
 
-Generate your favicons. You **do not** need to add the links in the html file. That has been taken care of. Download your favicons and put the content of your favicon.ico folder into the favicon.ico folder found in `src > assets`.
+Generate your favicons. You **do not** need to add the links in the html file. That has been taken care of. Download your favicons and put **all** the files inside of your favicon.ico folder into the favicon.ico folder found in `src > assets`.
 
+### Updating metatags
+You can use this website to update your metatags to save repitition - https://www.heymeta.com/.
+But I have added the code and reminders of what you need in the HTML file already for you.
 
 # How the gulp file works
 
