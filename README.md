@@ -40,7 +40,7 @@ Read the next section about gulp to understand how to run browserSync.
 ### Updating your favicons
 Visit this site  - https://www.favicon-generator.org/.
 
-Generate your favicons. You **do not** need to add the links in the html file. That has been taken care of. Download your favicons and put **all** the files inside of your favicon.ico folder into the favicon.ico folder found in `src > assets`.
+Generate your favicons. You **do not** need to add the links in the html file. That has been taken care of. Download your favicons and put **all** the files inside of your favicon.ico folder into the favicon.ico folder found in `src > img`.
 
 ### Updating metatags
 You can use this website to update your metatags to save repetition - https://www.heymeta.com/.
@@ -84,4 +84,4 @@ This build uses
 
    ~ Simple Grid
 
-If you only want to use some of these addons or none - simple go to `src > assets > js or sass`. Files are clearly named so delete which ever you don't need and if you don't want any, delete both the js and sass folder all together. Make sure you check both js and sass folders.
+If you only want to use some of these addons or none - simple go to `src > assets > js or sass`. Files are clearly named so delete which ever you don't need and if you don't want any, delete bthe `assets` folder all together. Make sure you check both js and sass folders though.
