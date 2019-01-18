@@ -66,10 +66,7 @@ $ gulp all
 
 In short I have removed the minify tasks from the generic 'gulp' command because these tasks are not necessary to constantly update with every save. This will speed up your browserSync and gulp performance. However you will need to remember to minify your code when pushing to development. If you would rather not have the hassle to remember this, you can simply cover it all with 'gulp all'.
 
-```
-$ ctrl + c
-```
-will quit any of the actively running gulp commands.
+In the terminal window *ctrl + c* will quit any of the actively running gulp commands.
 
 
 # Gitignore files
