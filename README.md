@@ -12,6 +12,7 @@ Note this is a build for simple **one pager websites**, **landing pages** or **s
 
 This is not really design for a website that will use multiple HTML files.
 
+
 # To start
 
 ### You need node.js. 
@@ -45,6 +46,7 @@ Generate your favicons. You **do not** need to add the links in the html file. T
 You can use this website to update your metatags to save repitition - https://www.heymeta.com/.
 But I have added the code and reminders of what you need in the HTML file already for you.
 
+
 # How the gulp file works
 
 I have set up gulp with 3 commands.
@@ -61,9 +63,11 @@ $ gulp all
 
 In short I have removed the minify tasks from the generic 'gulp' command because these tasks are not neccessary to constantly undate with every save. This will speed up your browsersync and gulp performance. However you will need to remember to minify your code when pushing to developement. If you would rather not have the hassle to remember this, you can simply cover it all with 'gulp all'.
 
+
 # Gitignore files
 
 You must remove the hashtags from the top files that are listed (clearly marked in the file), so that they **ARE** ignored. You do not want to have gulp files or package json files when we push your website to the project branch or live.
+
 
 # Framework and Assets
 
