@@ -10,7 +10,7 @@ This is not really design for a website that will use multiple HTML files.
 
 # To start
 
-1) You need node.js. Make sure you have that.
+1) You need node.js. 
 2) Pull this repo or download the zip file.
 3) In terminal check if you have gulp.
 ```
