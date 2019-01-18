@@ -71,7 +71,7 @@ This build uses
    
    ~ JQuery
    
-   ~ SlicK Carousel
+   ~ Slick Carousel
    
    ~ Simple Grid
 
