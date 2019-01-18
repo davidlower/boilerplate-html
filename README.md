@@ -49,7 +49,7 @@ But I have added the code and reminders of what you need in the HTML file alread
 
 # How the gulp file works
 
-I have set up gulp with 3 commands.
+I have set up gulp with 3 commands. Type any one of these comamnds into terminal.
 ```
 $ gulp
 $ gulp minify
