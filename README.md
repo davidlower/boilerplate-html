@@ -12,14 +12,16 @@ Note this is a build for simple **one pager websites**, **landing pages** or **s
 
 This is not really design for a website that will use multiple HTML files.
 
-
-# To start
-
 I have created a video to ease the understanding process.
+
 https://www.useloom.com/share/b8149b92bafa4ae1b6ae7805da62fd77
 
 This video here is a minor update on the previous video.
+
 https://www.useloom.com/share/4c64334c7fb045d894deb80b8c34f5ab
+
+
+# To start
 
 ### You need node.js.
 ### Pull this repo or download the zip file.
