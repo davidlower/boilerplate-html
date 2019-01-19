@@ -15,9 +15,11 @@ This is not really design for a website that will use multiple HTML files.
 
 # To start
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.useloom.com/embed/ff6a5bfe90694f958635d9ec1d7c8cb6" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+I have created a video to ease the understanding process.
+https://www.useloom.com/share/b8149b92bafa4ae1b6ae7805da62fd77
 
-<div style="position: relative; padding-bottom: 75.15657620041753%; height: 0;"><iframe src="https://www.useloom.com/embed/4c64334c7fb045d894deb80b8c34f5ab" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+This video here is a minor update on the previous video.
+https://www.useloom.com/share/b8149b92bafa4ae1b6ae7805da62fd77
 
 ### You need node.js.
 ### Pull this repo or download the zip file.
