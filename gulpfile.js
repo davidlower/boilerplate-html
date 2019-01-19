@@ -23,7 +23,7 @@ const sass = require('gulp-sass');
 //SASS BUILD
 gulp.task('styles', () => {
    gulp.src('src/**/sass/*.scss')
-      .pipe(sass())
+      .pipe(sass.sync().on('error', sass.logError))
       .pipe(concat('main.css'))
       .pipe(gulp.dest('production/'))
       .pipe(browserSync.stream());
@@ -94,6 +94,7 @@ gulp.task('img-compression', () => {
       .pipe(gulp.dest('production/img'));
 });
 
+// BROWSERSYNC
 gulp.task('serve', () => {
    browserSync.init({
       // files: ['src' + '/**/'],
@@ -108,6 +109,7 @@ gulp.task('serve', () => {
    gulp.watch('src/*.html', ['html']).on("change", browserSync.reload);
 });
 
-gulp.task('default', ['styles', 'js', 'html', 'serve', 'img-compression']);
-gulp.task('minify', ['minify-css', 'minify-js', 'minify-html']);
-gulp.task('all', ['styles', 'serve', 'js', 'html', 'img-compression', 'minify-css', 'minify-js', 'minify-html']);
+// GULP COMMANDS
+gulp.task('default', ['styles', 'js', 'html', 'serve', 'img-compression']); // type gulp
+gulp.task('minify', ['minify-css', 'minify-js', 'minify-html']); // type gulp minify
+gulp.task('all', ['styles', 'serve', 'js', 'html', 'img-compression', 'minify-css', 'minify-js', 'minify-html']); // type gulp all
