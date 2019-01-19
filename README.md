@@ -17,6 +17,8 @@ This is not really design for a website that will use multiple HTML files.
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.useloom.com/embed/ff6a5bfe90694f958635d9ec1d7c8cb6" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
 
+<div style="position: relative; padding-bottom: 75.15657620041753%; height: 0;"><iframe src="https://www.useloom.com/embed/4c64334c7fb045d894deb80b8c34f5ab" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+
 ### You need node.js.
 ### Pull this repo or download the zip file.
 ### In terminal check if you have gulp.
@@ -66,7 +68,7 @@ $ gulp all
 
 'gulp all' is the command to run **ALL** tasks together.
 
-In short I have removed the minify tasks from the generic 'gulp' command because these tasks are not necessary to constantly update with every save. This will speed up your browserSync and gulp performance. However you will need to remember to minify your code when pushing to development. If you would rather not have the hassle to remember this, you can simply cover it all with 'gulp all'.
+In short I have removed the minify tasks from the generic 'gulp' command because these tasks are not necessary to constantly update with every save. This will speed up your browserSync and gulp performance. However you will need to remember to minify your code when pushing to development - `gulp minify`.
 
 In the terminal window, pressing ***ctrl + c*** on the keyboard will quit any of the actively running gulp commands.
 
