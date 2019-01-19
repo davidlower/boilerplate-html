@@ -86,7 +86,7 @@ gulp.task('img-compression', () => {
          }),
          //jpg
          imageminMozjpeg({
-            quality: 75
+            quality: 78
          }), // 100 highest quality
       ], {
          verbose: true
