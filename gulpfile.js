@@ -98,7 +98,7 @@ gulp.task('img-compression', () => {
 gulp.task('serve', () => {
    browserSync.init({
       // files: ['src' + '/**/'],
-      open: true,
+      open: false,
       // port: 4000,
       server: {
          baseDir: 'production'
@@ -112,4 +112,3 @@ gulp.task('serve', () => {
 // GULP COMMANDS
 gulp.task('default', ['styles', 'js', 'html', 'serve', 'img-compression']); // type gulp
 gulp.task('minify', ['minify-css', 'minify-js', 'minify-html']); // type gulp minify
-gulp.task('all', ['styles', 'serve', 'js', 'html', 'img-compression', 'minify-css', 'minify-js', 'minify-html']); // type gulp all
