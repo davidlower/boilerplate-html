@@ -64,7 +64,6 @@ I have set up gulp with 3 commands. Type any one of these commands into terminal
 ```
 $ gulp
 $ gulp minify
-$ gulp all
 ```
 'gulp' is the generic command to start the basic everyday use case - this will kick start browerSync.
 

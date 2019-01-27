@@ -11,7 +11,7 @@ const concat = require('gulp-concat');
 const imagemin = require('gulp-imagemin');
 const imageminOptipng = require('imagemin-optipng');
 const imageminSvgo = require('imagemin-svgo');
-const imageminMozjpeg = require('imagemin-mozjpeg'); //need to run 'brew install libpng'
+const imageminMozjpeg = require('imagemin-mozjpeg');
 const newer = require('gulp-newer');
 // BROWSER-SYNC PLUGIN
 const browserSync = require('browser-sync').create();
@@ -71,7 +71,7 @@ gulp.task("minify-html", () => {
 
 //IMAGE COMPRESSION
 gulp.task('img-compression', () => {
-   gulp.src(['src/img/*'])
+   gulp.src(['src/img/**/*'])
       .pipe(newer('production/img/'))
       .pipe(imagemin([
          //png
@@ -107,6 +107,7 @@ gulp.task('serve', () => {
    gulp.watch('src/**/sass/*.scss', ['styles']);
    gulp.watch('src/**/js/*.js', ['js']).on("change", browserSync.reload);
    gulp.watch('src/*.html', ['html']).on("change", browserSync.reload);
+   gulp.watch('src/img/**/*', ['img-compression']).on("change", browserSync.reload);
 });
 
 // GULP COMMANDS
