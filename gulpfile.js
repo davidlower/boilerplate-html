@@ -5,6 +5,8 @@ const gulp = require('gulp');
 const uglify = require('gulp-uglify');
 const cleanCSS = require('gulp-clean-css');
 const htmlmin = require('gulp-htmlmin');
+const purge = require('gulp-css-purge');
+const groupmq = require('gulp-group-css-media-queries');
 // CONCAT PLUGIN
 const concat = require('gulp-concat');
 // IMAGE COMPRESSION PLUGINS
@@ -15,42 +17,32 @@ const imageminMozjpeg = require('imagemin-mozjpeg');
 const newer = require('gulp-newer');
 // BROWSER-SYNC PLUGIN
 const browserSync = require('browser-sync').create();
-// AUTOPREFIXER PLUGINS
-const postcss = require('gulp-postcss');
+// CSS & AUTOPREFIXER PLUGINS
 const autoprefixer = require('gulp-autoprefixer');
 const sass = require('gulp-sass');
+// SOURCEMAPS
+const sourcemaps = require('gulp-sourcemaps');
 
-//SASS BUILD
-gulp.task('styles', () => {
-   gulp.src('src/**/sass/*.scss')
+//CSS
+function css(done) {
+   gulp.src('src/**/*.scss', 'src/scss/**/*.css')
+      .pipe(sourcemaps.init())
       .pipe(sass.sync().on('error', sass.logError))
       .pipe(concat('main.css'))
-      .pipe(gulp.dest('production/'))
-      .pipe(browserSync.stream());
-});
+      .pipe(sourcemaps.write('.'))
+      .pipe(gulp.dest('production'));
+   done();
+}
 
-// JAVASCRIPT BUILD
-gulp.task('js', () => {
-   gulp.src('src/**/js/*.js')
-      .pipe(concat('main.js'))
-      .pipe(gulp.dest('production/'));
-});
-//HTML BUILD
-gulp.task('html', () => {
-   gulp.src('src/*.html')
-      .pipe(gulp.dest('production/'));
-});
-
-// MINIFY FILES
-// JAVASCRIPT
-gulp.task("minify-js", () => {
-   gulp.src('production/*.js')
-      .pipe(uglify())
-      .pipe(gulp.dest('production/'));
-});
-// CSS
-gulp.task("minify-css", () => {
+// CSS BUILD - AUTOPREFIXER, MINIFICATION, PURGING, MEDIA-QUERIES
+function cssBuild(done) {
    gulp.src('production/*.css')
+      .pipe(groupmq())
+      .pipe(purge({
+         trim: true,
+         shorten: true,
+         verbose: true
+      }))
       .pipe(autoprefixer({
          browsers: ['last 2 versions'],
          cascade: false
@@ -58,21 +50,72 @@ gulp.task("minify-css", () => {
       .pipe(cleanCSS({
          compatibility: 'ie8'
       }))
-      .pipe(gulp.dest('production/'));
-});
+      .pipe(gulp.dest('production'));
+   done();
+}
+
 // HTML
-gulp.task("minify-html", () => {
+function html(done) {
+   gulp.src('src/*.html')
+      .pipe(gulp.dest('production'));
+   done();
+}
+
+// HTML BUILD - MINIFY HTML
+function htmlBuild(done) {
    gulp.src('production/*.html')
       .pipe(htmlmin({
          collapseWhitespace: true
       }))
-      .pipe(gulp.dest('production/'));
-});
+      .pipe(gulp.dest('production'));
+   done();
+}
+
+// JAVASCRIPT
+function js(done) {
+   gulp.src('src/**/*.js')
+      .pipe(concat('main.js'))
+      .pipe(gulp.dest('production'));
+   done();
+}
+
+// JAVASCRIPT BUILD - MINIFY JS
+function jsBuild(done) {
+   gulp.src('production/*.js')
+      .pipe(uglify())
+      .pipe(gulp.dest('production'));
+   done();
+}
+
+// LAUNCH THIS AT THE BEGINNING OF ANY PROJECT - GRABS ALL ASSETS FROM NODE MODULES
+// If sections are commented out it means they are not needed for this project
+function launchProject(done) {
+   // LITY - LIGHTBOX MODULE FOR JQUERY
+   gulp.src('node_modules/lity/dist/lity.min.js')
+      .pipe(gulp.dest('src/assets/js'));
+   gulp.src('node_modules/lity/dist/lity.min.css')
+      .pipe(gulp.dest('src/assets/sass'));
+
+   // JQUERY
+   gulp.src('node_modules/jquery/dist/jquery.min.js')
+      .pipe(gulp.dest('src/assets/js'));
+
+   // SIMPLE GRID - GRID SYSTEM LIKE BOOTSTRAP
+   gulp.src('node_modules/simplegrid/simple-grid.scss')
+      .pipe(gulp.dest('src/assets/sass'));
+
+   // SLICK CAROUSEL - SLIDER MODULE FOR JQUERY
+   gulp.src('node_modules/slick-carousel/slick/slick.min.js')
+      .pipe(gulp.dest('src/assets/js'));
+   gulp.src('node_modules/slick-carousel/slick/slick.scss')
+      .pipe(gulp.dest('src/assets/sass'));
+   done();
+}
 
 //IMAGE COMPRESSION
-gulp.task('img-compression', () => {
-   gulp.src(['src/img/**/*'])
-      .pipe(newer('production/img/'))
+function imgCompression(done) {
+   gulp.src('src/img/**/*')
+      .pipe(newer('production/img'))
       .pipe(imagemin([
          //png
          imageminOptipng({
@@ -86,30 +129,51 @@ gulp.task('img-compression', () => {
          }),
          //jpg
          imageminMozjpeg({
-            quality: 78
-         }), // 100 highest quality
+            quality: 79
+         }), // highest quality 100
       ], {
          verbose: true
       }))
       .pipe(gulp.dest('production/img'));
-});
+   done();
+}
 
-// BROWSERSYNC
-gulp.task('serve', () => {
+// BROWSERSYNC BUILD
+function bs(done) {
    browserSync.init({
-      // files: ['src' + '/**/'],
       open: false,
-      // port: 4000,
+      port: 4000,
       server: {
          baseDir: 'production'
       }
    });
-   gulp.watch('src/**/sass/*.scss', ['styles']);
-   gulp.watch('src/**/js/*.js', ['js']).on("change", browserSync.reload);
-   gulp.watch('src/*.html', ['html']).on("change", browserSync.reload);
-   gulp.watch('src/img/**/*', ['img-compression']).on("change", browserSync.reload);
-});
+   done();
+}
 
-// GULP COMMANDS
-gulp.task('default', ['styles', 'js', 'html', 'serve', 'img-compression']); // type gulp
-gulp.task('minify', ['minify-css', 'minify-js', 'minify-html']); // type gulp minify
+function browserSyncReload(done) {
+   browserSync.reload();
+   done();
+}
+
+function watchFiles(done) {
+   gulp.watch('src/**/*.scss', css);
+   gulp.watch('src/**/*.js', js);
+   gulp.watch('src/img/**/*', imgCompression);
+   gulp.watch('src/*.html', html);
+   gulp.watch(
+      [
+         'src/**/*'
+      ],
+      browserSyncReload);
+   done();
+}
+
+gulp.task('css', css);
+gulp.task('js', js);
+gulp.task('img', imgCompression);
+gulp.task('cssBuild', cssBuild);
+gulp.task('jsBuild', jsBuild);
+gulp.task('htmlBuild', htmlBuild);
+gulp.task('build', gulp.series(cssBuild, css, jsBuild, js, htmlBuild, html)); // Use this to build your start project & again every time you push to live production
+gulp.task('launch', launchProject); // Use this to fetch your assets or vendors - for example jQuery
+gulp.task('default', gulp.parallel(css, imgCompression, js, html, bs, watchFiles));

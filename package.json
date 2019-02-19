@@ -1,19 +1,22 @@
 {
-  "name": "starter-build",
+  "name": "Starter-build",
   "version": "1.0.0",
-  "description": "Starter build for simple websites using html, sass, gulp, jquery and browsersync.",
+  "description": "Use for one page websites and landing pages",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/davidlower/boilerplate-html.git"
+    "url": "https://github.com/davidlower/starter-build.git"
   },
   "keywords": [
     "html",
     "sass",
     "jquery",
+    "slick-carousel",
+    "simplegrid",
+    "lity",
     "gulp",
     "browsersync",
     "boilerplate",
@@ -23,28 +26,33 @@
   "author": "David Lower",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/davidlower/boilerplate-html/issues"
+    "url": "davidlower4@gmail.com"
   },
-  "homepage": "https://github.com/davidlower/boilerplate-html#readme",
-  "dependencies": {
-    "jquery": "^3.3.1",
-    "simplegrid": "^1.0.2",
-    "slick-carousel": "^1.8.1"
-  },
+  "homepage": "https://davidlower.co.uk",
   "devDependencies": {
     "browser-sync": "^2.23.6",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^4.1.0",
-    "gulp-clean-css": "^3.9.3",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-clean-css": "^4.0.0",
     "gulp-concat": "^2.6.1",
-    "gulp-imagemin": "^4.1.0",
+    "gulp-css-purge": "^3.0.9",
+    "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^5.0.3",
     "gulp-newer": "^1.4.0",
-    "gulp-postcss": "^7.0.1",
     "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.4",
     "gulp-uglify": "^3.0.0",
-    "imagemin-mozjpeg": "^7.0.0",
+    "imagemin-mozjpeg": "^8.0.0",
     "imagemin-optipng": "^6.0.0",
-    "imagemin-svgo": "^7.0.0",
-    "gulp-htmlmin": "^4.0.0"
+    "imagemin-svgo": "^7.0.0"
+  },
+  "dependencies": {
+    "gulp": "^4.0.0",
+    "jquery": "^3.3.1",
+    "latest-version": "^4.0.0",
+    "lity": "^2.3.1",
+    "npm": "^6.7.0",
+    "simplegrid": "^1.0.2",
+    "slick-carousel": "^1.8.1"
   }
 }
