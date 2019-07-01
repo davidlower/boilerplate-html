@@ -1,0 +1,26 @@
+// PADDING & MARGINS
+$br: 4px !default;
+$xs-pad: 4px !default;
+$sm-pad: 8px !default;
+$md-pad: 15px !default;
+$lg-pad: 25px !default;
+$xl-pad: 42px !default;
+
+// ANIMATIONS
+$transition: .3s ease-in-out !default;
+
+// BREAKPOINTS
+$breakpoints: (xs: 320px, // iPhone 5 320px
+   s: 414px, // iPhone 8 plus 414px
+   m: 768px, // iPad portrait 768px
+   l: 1024px, // iPad landscape 1024px
+   xl: 1280px, // iPad landscape 1024px
+);
+
+// BORDERS
+$border-1: 1px solid $brand-1 !default;
+$border-2: 1px solid $brand-2 !default;
+$border-3: 1px solid $brand-3 !default;
+
+// BORDER RADIUS
+$br: 5px !default;

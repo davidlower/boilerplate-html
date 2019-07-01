@@ -1,0 +1,14 @@
+
+// MEDIA QUERIES
+@mixin MQ($size) {
+   $breakpoint: map-get($breakpoints, $size);
+   @media screen and (max-width: $breakpoint) {
+      @content;
+   }
+}
+
+// UPPERCASE TITLES
+@mixin uppercase($uc: uppercase, $ls: 5px) {
+   letter-spacing: $ls;
+   text-transform: $uc;
+}

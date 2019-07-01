@@ -1,0 +1,193 @@
+// p {
+//    margin: 0 0 $md-pad;
+// }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+{
+    font-family: $s-ff;
+    font-weight: 400;
+
+    vertical-align: text-top;
+
+    color: $brand-1;
+}
+
+h1
+{
+    font-size: $font-size-h1;
+    line-height: $line-height-h1;
+
+    margin: $lg-pad 0 $md-pad;
+}
+
+h2
+{
+    font-size: $font-size-h2;
+    line-height: $line-height-h2;
+
+    margin: $lg-pad 0 $md-pad;
+}
+
+h3
+{
+    font-size: $font-size-h3;
+    line-height: $line-height-h3;
+
+    margin: $md-pad 0 $xs-pad;
+}
+
+h4
+{
+    font-size: $font-size-h4;
+    line-height: $line-height-h4;
+
+    margin: $md-pad 0 $xs-pad;
+}
+
+h5
+{
+    font-size: $font-size-h5;
+    line-height: $line-height-h5;
+
+    margin: $md-pad 0 $xs-pad;
+}
+
+h6
+{
+    font-size: $font-size-h6;
+    line-height: $line-height-h6;
+
+    margin: $md-pad 0 $xs-pad;
+}
+
+// small {
+//    color: $secondary;
+//    vertical-align: bottom;
+// }
+//
+// pre {
+//    background: $grey;
+//    color: $text;
+//    display: block;
+//    font-family: $monospace;
+//    font-size: $font-size-base;
+//    margin: $md-pad 0;
+//    padding: $md-pad;
+//    white-space: pre-wrap;
+//    overflow-wrap: break-word;
+// }
+//
+// code {
+//    color: $text;
+//    font-family: $monospace;
+//    font-size: $font-size-base;
+//    line-height: inherit;
+//    margin: 0;
+//    padding: 0;
+//    vertical-align: baseline;
+//    word-break: break-all;
+//    word-wrap: break-word;
+// }
+
+dl
+{
+    margin-bottom: $md-pad;
+}
+
+dd
+{
+    margin-left: $xl-pad;
+
+    color: rgb(35, 223, 164);
+}
+
+ol,
+ul
+{
+    margin-bottom: $sm-pad;
+    padding-left: $xl-pad;
+
+    list-style: none;
+
+    vertical-align: baseline;
+}
+
+blockquote
+{
+    font-family: $s-ff;
+    font-style: italic;
+
+    margin: $md-pad 0;
+    padding-left: $md-pad;
+
+    border-left: 2px solid $text;
+}
+
+blockquote:after,
+blockquote:before,
+q:after,
+q:before
+{
+    content: '';
+    content: none;
+}
+
+figcaption
+{
+    font-family: $s-ff;
+}
+
+u
+{
+    text-decoration: underline;
+}
+
+s
+{
+    text-decoration: line-through;
+}
+
+b,
+strong
+{
+    font-weight: bolder;
+}
+
+sub,
+sup
+{
+    font-size: $font-size-small;
+    line-height: 0;
+
+    position: relative;
+
+    vertical-align: baseline;
+}
+
+sub
+{
+    bottom: -.25em;
+}
+
+sup
+{
+    top: -.5em;
+}
+
+mark
+{
+    background: $mark;
+}
+
+abbr[title]
+{
+    text-decoration: underline;
+    text-decoration: underline dotted;
+
+    border-bottom: none;
+}

@@ -1,0 +1,38 @@
+// GREY SCALE
+$black: rgba(0, 0, 0, 1) !default;
+$black-90: rgba(34, 34, 34, 1) !default;
+$black-80: rgba(43, 43, 43, 1) !default;
+$grey-70: rgba(96, 96, 96, 1) !default;
+$grey-60: rgba(122, 122, 122, 1) !default;
+$grey: rgba(147, 147, 147, 1) !default;
+$grey-40: rgba(170, 170, 170, 1) !default;
+$grey-30: rgba(193, 193, 193, 1) !default;
+$white-20: rgba(215, 215, 215, 1) !default;
+$white-10: rgba(235, 235, 235, 1) !default;
+$white: rgba(255, 255, 255, 1) !default;
+
+// BRAND COLORS
+$brand-1: #5f6972 !default;
+$brand-1-light: lighten($brand-1, 20%) !default;
+$brand-1-dark: darken($brand-1, 20%) !default;
+
+$brand-2: #e8f3fc !default;
+$brand-2-light: lighten($brand-2, 20%) !default;
+$brand-2-dark: darken($brand-2, 20%) !default;
+
+$brand-3: #59a3af !default;
+$brand-3-light: lighten($brand-3, 20%) !default;
+$brand-3-dark: darken($brand-3, 20%) !default;
+
+// ACCENTS & STATES
+$active: $brand-1;
+$disabled: $grey-30 !default;
+$success: rgba(0, 223, 149, 1) !default;
+$error: rgba(228, 35, 44, 1) !default;
+$mark: rgba(254, 240, 61, 1);
+
+// LINKS
+$link-color: $brand-1 !default;
+$link-color-hover: $brand-1-dark !default;
+
+$text: $brand-1;

@@ -1,0 +1,45 @@
+table {
+   margin-bottom: $md-pad;
+
+   border-spacing: 0;
+
+   border-collapse: collapse;
+   border-top: $border-1;
+}
+
+caption {
+   padding: $sm-pad 0;
+}
+
+thead th {
+   text-align: left;
+
+   border: 0;
+   border-bottom: 2px solid $grey;
+}
+
+tr {
+   margin-bottom: $sm-pad;
+}
+
+td,
+th {
+   padding: $md-pad;
+
+   vertical-align: inherit;
+
+   border-bottom: $border-1;
+}
+
+tfoot tr {
+   text-align: left;
+}
+
+tfoot td {
+   padding: $md-pad $xs-pad;
+
+   color: $brand-2;
+
+   font-size: $sm-pad;
+   font-style: italic;
+}

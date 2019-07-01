@@ -1,0 +1,16 @@
+// LINKS
+
+a {
+   margin: 0;
+
+   text-decoration: none;
+
+   color: $link-color;
+   background-color: transparent;
+
+   &:hover {
+      text-decoration: underline;
+
+      color: $link-color-hover;
+   }
+}
