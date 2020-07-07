@@ -55,6 +55,6 @@
     "imagemin-webp": "^5.1.0"
   },
   "dependencies": {
-    "npm": "^6.9.0"
+    "npm": "^6.14.6"
   }
 }
